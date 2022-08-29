@@ -8,9 +8,10 @@ body {
 
 body {
   background: #ffffff;  
-  background: -webkit-linear-gradient(125.5deg, #FFEBD3 1.34%, #AEE8DD 97.45%), url('../img/grain2.png');
-  background: linear-gradient(125.5deg, #FFEBD3 1.34%, #AEE8DD 97.45%), url('../img/grain2.png'); 
+  background: -webkit-linear-gradient(125.5deg, #FFEBD3 1.34%, #AEE8DD 97.45%), url('../img/grain2.png') no-repeat;
+  background: linear-gradient(125.5deg, #FFEBD3 1.34%, #AEE8DD 97.45%), url('../img/grain2.png') no-repeat; 
   background-size:cover;
+  background-repeat:no-repeat;
   background-blend-mode: multiply;
   margin:0;
   padding:0;
@@ -23,6 +24,7 @@ body {
 
 /* FONTS */
 
+/*
 @font-face {
   font-family: 'Nunito Sans Regular';
   src: url('../fonts/nunitosans-regular-webfont.woff') format('woff');
@@ -43,6 +45,8 @@ body {
   src: url('../fonts/nunitosans-bolditalic-webfont.woff') format('woff');
 }
 
+*/
+
 @font-face {
   font-family: 'Scilla';
   src: url('../fonts/scilla-regular-webfont.woff') format('woff');
@@ -57,22 +61,24 @@ body {
 
 h1 {
   font-family:'Scilla', serif;
-  font-size:48px;
+  font-size:56px;
   margin:0px;
 }
 
 h2 {
-  font-size:16px;
-  font-family:'Nunito Sans Bold', sans-serif;
+  font-size:14px;
+  font-family: 'Roboto Mono', monospace;
   text-transform:uppercase;
+  font-weight:400;
+  letter-spacing: 1.4px;
   margin-bottom:0;
 }
 
 
 p, ul, li {
-  font-family: 'Nunito Sans Regular', sans-serif;
-  font-size:20px;
-  color:#000;
+  font-family: 'Roboto Mono', monospace;
+  font-size:16px;
+  color:rgb(36, 35, 35);
   line-height:1.4em;
 }
 
@@ -87,7 +93,7 @@ a {
 }
 
 a:hover {
-  font-family:'Nunito Sans Bold Italic', sans-serif;
+  font-style:italic;
 }
 
 
@@ -105,9 +111,9 @@ footer ul li {
 }
 
 
-footer ul li a {
+footer ul li a, .footer-left p {
   text-decoration:none;
-  font-size:20px;
+  font-size:14px;
 }
 
 hr {
@@ -122,11 +128,12 @@ hr {
 .main {
   display:flex;
   justify-content: flex-start;
-  margin:80px 0px 48px 0px;
+  align-items: center;
+  margin:96px 0px 80px 0px;
 }
 
 .main img {
-  width:35%;
+  width:30%;
   height:100%;
   margin-right:96px;
 }
